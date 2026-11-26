@@ -1,0 +1,2147 @@
+00:17:50 [INFO] core.rag_pipeline — Initialising RAG pipeline …
+00:17:50 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+00:17:50 [ERROR] core.session — Pipeline init failed
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\core\embedder.py", line 103, in _load_model
+    from sentence_transformers import SentenceTransformer
+ModuleNotFoundError: No module named 'sentence_transformers'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\core\session.py", line 42, in _bootstrap_pipeline
+    pipeline = RAGPipeline()
+               ^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\rag_pipeline.py", line 41, in __init__
+    self.embedder = get_embedder(EMBEDDING_MODEL, CACHE_DIR)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\embedder.py", line 25, in get_embedder
+    _MODEL_SINGLETON = Embedder(model_name, cache_dir)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\embedder.py", line 53, in __init__
+    self._model = self._load_model(model_name, cache_dir)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\embedder.py", line 105, in _load_model
+    raise ImportError(
+ImportError: sentence-transformers not installed.
+Run: pip install sentence-transformers
+00:32:27 [INFO] core.rag_pipeline — Initialising RAG pipeline …
+00:32:27 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+00:34:04 [WARNING] huggingface_hub.file_download — Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+00:35:03 [INFO] core.embedder — Embedding model ready.
+00:35:07 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+00:35:07 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+00:35:07 [INFO] core.vector_store — VectorStore ready — 0 docs in 'documind_docs'
+00:35:07 [INFO] core.reranker — Loading reranker: cross-encoder/ms-marco-MiniLM-L-6-v2
+00:35:10 [WARNING] huggingface_hub.file_download — Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+00:35:32 [INFO] core.reranker — Reranker ready.
+00:35:34 [INFO] core.rag_pipeline — Using LLM model: tinyllama:latest
+00:35:34 [INFO] core.rag_pipeline — RAG pipeline ready.
+00:38:19 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper.pdf
+00:38:20 [INFO] core.document_processor —   → 22 chunks from NIPS-2017-attention-is-all-you-need-Paper.pdf
+00:38:43 [INFO] core.vector_store — Added 22 chunks. Total: 22
+00:38:43 [INFO] ui.sidebar — Indexed 22 chunks from NIPS-2017-attention-is-all-you-need-Paper.pdf
+00:38:43 [INFO] core.document_processor — Processing: Big Data Analytics.pdf
+00:38:43 [INFO] core.document_processor —   → 1 chunks from Big Data Analytics.pdf
+00:38:45 [INFO] core.vector_store — Added 1 chunks. Total: 23
+00:38:45 [INFO] ui.sidebar — Indexed 1 chunks from Big Data Analytics.pdf
+00:38:46 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+00:39:06 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+00:42:19 [INFO] core.rag_pipeline — Initialising RAG pipeline …
+00:42:19 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+00:42:19 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+00:42:19 [INFO] core.vector_store — VectorStore ready — 23 docs in 'documind_docs'
+00:42:22 [INFO] core.rag_pipeline — Using LLM model: tinyllama:latest
+00:42:22 [INFO] core.rag_pipeline — RAG pipeline ready.
+00:43:04 [INFO] core.rag_pipeline — Initialising RAG pipeline …
+00:43:04 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+00:43:04 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+00:43:04 [INFO] core.vector_store — VectorStore ready — 23 docs in 'documind_docs'
+00:43:06 [INFO] core.rag_pipeline — Using LLM model: tinyllama:latest
+00:43:06 [INFO] core.rag_pipeline — RAG pipeline ready.
+00:47:28 [INFO] core.rag_pipeline — Initialising RAG pipeline …
+00:47:28 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+00:47:28 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+00:47:28 [INFO] core.vector_store — VectorStore ready — 23 docs in 'documind_docs'
+00:47:30 [INFO] core.rag_pipeline — Using LLM model: tinyllama:latest
+00:47:30 [INFO] core.rag_pipeline — RAG pipeline ready.
+00:55:13 [INFO] core.rag_pipeline — Initialising RAG pipeline …
+00:55:13 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+00:55:57 [WARNING] huggingface_hub.utils._http — '(ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: 5624ec50-1e71-48da-bfda-84dcd128a192)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json
+00:55:57 [WARNING] huggingface_hub.utils._http — Retrying in 1s [Retry 1/5].
+00:56:18 [INFO] core.embedder — Embedding model ready.
+00:56:22 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+00:56:22 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+00:56:22 [INFO] core.vector_store — VectorStore ready — 23 docs in 'documind_docs'
+00:56:22 [INFO] core.reranker — Loading reranker: cross-encoder/ms-marco-MiniLM-L-6-v2
+00:56:32 [WARNING] huggingface_hub.utils._http — '(ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: f5239962-0793-4150-8a40-fa2c8a968dc4)')' thrown while requesting HEAD https://huggingface.co/cross-encoder/ms-marco-MiniLM-L-6-v2/resolve/main/config.json
+00:56:32 [WARNING] huggingface_hub.utils._http — Retrying in 1s [Retry 1/5].
+00:56:49 [INFO] core.reranker — Reranker ready.
+00:56:51 [INFO] core.rag_pipeline — Using LLM model: tinyllama:latest
+00:56:51 [INFO] core.rag_pipeline — RAG pipeline ready.
+00:56:51 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+00:57:31 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+12:13:14 [INFO] core.rag_pipeline — Initialising RAG pipeline …
+12:13:14 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+12:14:50 [INFO] core.embedder — Embedding model ready.
+12:14:53 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+12:14:53 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+12:14:53 [INFO] core.vector_store — VectorStore ready — 23 docs in 'documind_docs'
+12:14:53 [INFO] core.reranker — Loading reranker: cross-encoder/ms-marco-MiniLM-L-6-v2
+12:14:56 [INFO] core.reranker — Reranker ready.
+12:14:58 [INFO] core.rag_pipeline — Using LLM model: tinyllama:latest
+12:14:58 [INFO] core.rag_pipeline — RAG pipeline ready.
+12:14:58 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+12:16:05 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+12:32:38 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+12:32:38 [INFO] core.vector_store — Vector store cleared.
+12:34:58 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper.pdf
+12:34:59 [INFO] core.document_processor —   → 22 chunks from NIPS-2017-attention-is-all-you-need-Paper.pdf
+12:35:27 [INFO] core.vector_store — Added 22 chunks. Total: 22
+12:35:27 [INFO] ui.sidebar — Indexed 22 chunks from NIPS-2017-attention-is-all-you-need-Paper.pdf
+12:35:27 [INFO] core.document_processor — Processing: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT.pdf
+12:35:27 [INFO] core.document_processor —   → 26 chunks from RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT.pdf
+12:35:44 [INFO] core.vector_store — Added 26 chunks. Total: 48
+12:35:44 [INFO] ui.sidebar — Indexed 26 chunks from RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT.pdf
+12:35:45 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+12:37:24 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+20:18:19 [INFO] core.rag_pipeline — Initialising RAG pipeline ...
+20:18:19 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+20:19:08 [WARNING] huggingface_hub.utils._http — '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /BAAI/bge-small-en-v1.5/resolve/main/modules.json (Caused by NameResolutionError("HTTPSConnection(host=\'huggingface.co\', port=443): Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 3c996e95-548b-41cf-82a8-fd135d082b77)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json
+20:19:08 [WARNING] huggingface_hub.utils._http — Retrying in 1s [Retry 1/5].
+20:19:34 [INFO] core.embedder — Embedding model ready.
+20:19:37 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+20:19:37 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+20:19:37 [INFO] core.vector_store — VectorStore ready — 0 docs in 'documind_docs'
+20:19:37 [INFO] core.reranker — Loading reranker: cross-encoder/ms-marco-MiniLM-L-6-v2
+20:19:42 [INFO] core.reranker — Reranker ready.
+20:19:44 [INFO] core.rag_pipeline — Using LLM model: gemma2:2b
+20:19:44 [INFO] core.rag_pipeline — RAG pipeline ready.
+20:20:24 [INFO] core.document_processor — Tesseract OCR ready (version 5.5.0.20241111)
+20:20:24 [INFO] core.document_processor — Processing: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf
+20:20:26 [INFO] core.document_processor —   -> 36 chunks  (file: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf)
+20:20:54 [INFO] core.vector_store — Added 36 chunks. Total: 36
+20:20:54 [INFO] ui.sidebar — Indexed 36 chunks from RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf
+20:20:55 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper.pdf
+20:21:03 [INFO] core.document_processor —   -> 33 chunks  (file: NIPS-2017-attention-is-all-you-need-Paper.pdf)
+20:21:24 [INFO] core.vector_store — Added 33 chunks. Total: 69
+20:21:24 [INFO] ui.sidebar — Indexed 33 chunks from NIPS-2017-attention-is-all-you-need-Paper.pdf
+20:21:25 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+20:21:43 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+20:22:01 [ERROR] core.llm_client — LLM error: 500 Server Error: Internal Server Error for url: http://localhost:11434/api/chat
+20:24:40 [INFO] core.rag_pipeline — Initialising RAG pipeline ...
+20:24:41 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+20:24:41 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+20:24:41 [INFO] core.vector_store — VectorStore ready — 69 docs in 'documind_docs'
+20:24:43 [INFO] core.rag_pipeline — Using LLM model: gemma2:2b
+20:24:43 [INFO] core.rag_pipeline — RAG pipeline ready.
+20:48:44 [INFO] core.rag_pipeline — Initialising RAG pipeline ...
+20:48:44 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+20:49:26 [INFO] core.embedder — Embedding model ready.
+20:49:28 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+20:49:28 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+20:49:28 [INFO] core.vector_store — VectorStore ready — 69 docs in 'documind_docs'
+20:49:28 [INFO] core.reranker — Loading reranker: cross-encoder/ms-marco-MiniLM-L-6-v2
+20:50:05 [INFO] core.reranker — Reranker ready.
+20:50:07 [INFO] core.rag_pipeline — Using LLM model: qwen2:1.5b
+20:50:07 [INFO] core.rag_pipeline — RAG pipeline ready.
+20:50:07 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+20:50:26 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+20:50:26 [INFO] core.vector_store — Vector store cleared.
+20:50:56 [INFO] core.document_processor — Tesseract OCR ready.
+20:50:56 [INFO] core.document_processor — Processing: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf
+20:50:57 [INFO] core.document_processor —   -> 36 chunks from RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf
+20:51:19 [INFO] core.vector_store — Added 36 chunks. Total: 36
+20:51:19 [INFO] ui.sidebar — Indexed 36 chunks from RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf
+20:51:19 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+20:51:25 [INFO] core.document_processor —   -> 33 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+20:51:50 [INFO] core.vector_store — Added 33 chunks. Total: 69
+20:51:50 [INFO] ui.sidebar — Indexed 33 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+20:51:52 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+20:52:00 [INFO] core.document_processor — Tesseract OCR ready.
+20:52:09 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+20:58:12 [INFO] core.rag_pipeline — Initialising RAG pipeline ...
+20:58:12 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+20:58:53 [INFO] core.embedder — Embedding model ready.
+20:58:55 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+20:58:55 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+20:58:55 [INFO] core.vector_store — VectorStore ready — 69 docs in 'documind_docs'
+20:58:55 [INFO] core.reranker — Loading reranker: cross-encoder/ms-marco-MiniLM-L-6-v2
+20:59:06 [INFO] core.reranker — Reranker ready.
+20:59:08 [INFO] core.rag_pipeline — Using LLM model: qwen2:1.5b
+20:59:08 [INFO] core.rag_pipeline — RAG pipeline ready.
+20:59:08 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+20:59:26 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+22:26:33 [INFO] core.rag_pipeline — Initialising RAG pipeline ...
+22:26:33 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+22:26:33 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+22:26:33 [INFO] core.vector_store — VectorStore ready — 69 docs in 'documind_docs'
+22:26:35 [INFO] core.rag_pipeline — Using LLM model: qwen2:1.5b
+22:26:35 [INFO] core.rag_pipeline — RAG pipeline ready.
+11:32:10 [INFO] core.rag_pipeline — Initialising RAG pipeline ...
+11:32:10 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+11:32:36 [INFO] core.rag_pipeline — Initialising RAG pipeline ...
+11:32:36 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+11:33:33 [INFO] core.embedder — Embedding model ready.
+11:33:34 [INFO] core.embedder — Embedding model ready.
+11:33:36 [ERROR] core.session — Pipeline init failed
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 417, in _validate_tenant_database
+    self._admin_client.get_tenant(name=tenant)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 474, in get_tenant
+    return self._server.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\segment.py", line 197, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\db\mixins\sysdb.py", line 206, in get_tenant
+    row = cur.execute(sql, params).fetchone()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: tenants
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\core\session.py", line 42, in _bootstrap_pipeline
+    pipeline = RAGPipeline()
+               ^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\rag_pipeline.py", line 35, in __init__
+    self.vector_store = VectorStore(
+                        ^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 46, in __init__
+    self._init_db()
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 59, in _init_db
+    self._client = chromadb.PersistentClient(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\__init__.py", line 152, in PersistentClient
+    return ClientCreator(tenant=tenant, database=database, settings=settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 80, in __init__
+    self._validate_tenant_database(tenant=self.tenant, database=self.database)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 426, in _validate_tenant_database
+    raise ValueError(
+ValueError: Could not connect to tenant default_tenant. Are you sure it exists?
+11:33:38 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+11:33:38 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+11:33:38 [INFO] core.vector_store — VectorStore ready — 0 docs in 'documind_docs'
+11:33:38 [INFO] core.reranker — Loading reranker: cross-encoder/ms-marco-MiniLM-L-6-v2
+11:33:40 [INFO] core.reranker — Reranker ready.
+11:33:42 [INFO] core.rag_pipeline — Model: llama3.2:1b
+11:33:42 [INFO] core.rag_pipeline — Pipeline ready.
+11:34:15 [INFO] core.document_processor — Tesseract OCR ready.
+11:34:15 [INFO] core.document_processor — Processing: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1) - Copy.pdf
+11:34:17 [INFO] core.document_processor —   -> 39 chunks from RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1) - Copy.pdf
+11:34:41 [INFO] core.vector_store — Added 39 chunks. Total: 39
+11:34:41 [INFO] ui.sidebar — Indexed 39 chunks from RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1) - Copy.pdf
+11:34:41 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+11:34:47 [INFO] core.document_processor —   -> 35 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+11:35:18 [INFO] core.vector_store — Added 35 chunks. Total: 74
+11:35:18 [INFO] ui.sidebar — Indexed 35 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+11:35:19 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+11:35:43 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+11:35:43 [INFO] core.rag_pipeline — Retrieved 3 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+11:35:43 [INFO] core.rag_pipeline — Retrieved 3 chunks from RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1) - Copy.pdf
+11:35:43 [INFO] core.rag_pipeline — Total multi-doc hits: 6 from 2 files
+11:50:41 [INFO] core.rag_pipeline — Initialising RAG pipeline ...
+11:50:41 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+11:51:17 [INFO] core.embedder — Embedding model ready.
+11:51:20 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+11:51:20 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+11:51:20 [INFO] core.vector_store — VectorStore ready — 74 docs in 'documind_docs'
+11:51:20 [INFO] core.reranker — Loading reranker: cross-encoder/ms-marco-MiniLM-L-6-v2
+11:51:22 [INFO] core.reranker — Reranker ready.
+11:51:24 [INFO] core.rag_pipeline — Model: llama3.2:1b
+11:51:24 [INFO] core.rag_pipeline — Pipeline ready.
+11:51:24 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+11:51:51 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+19:24:11 [INFO] core.rag_pipeline — Initialising RAG pipeline ...
+19:24:11 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+19:24:55 [INFO] core.embedder — Embedding model ready.
+19:24:58 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+19:24:58 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+19:24:58 [INFO] core.vector_store — VectorStore ready — 0 docs in 'documind_docs'
+19:25:00 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+19:25:00 [INFO] core.rag_pipeline — Pipeline ready.
+19:25:25 [INFO] core.document_processor — Processing: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1) - Copy.pdf
+19:25:25 [INFO] core.document_processor —   -> 46 chunks from RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1) - Copy.pdf
+19:25:46 [INFO] core.vector_store — Added 46 chunks. Total: 46
+19:25:46 [INFO] ui.sidebar — Indexed 46 chunks from RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1) - Copy.pdf
+19:25:46 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+19:25:47 [INFO] core.document_processor —   -> 37 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+19:26:08 [INFO] core.vector_store — Added 37 chunks. Total: 83
+19:26:08 [INFO] ui.sidebar — Indexed 37 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+19:26:10 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+19:26:26 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+19:30:57 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+19:30:57 [INFO] core.vector_store — Vector store cleared.
+19:31:16 [INFO] core.document_processor — Processing: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1) - Copy.pdf
+19:31:16 [INFO] core.document_processor —   -> 46 chunks from RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1) - Copy.pdf
+19:31:40 [INFO] core.vector_store — Added 46 chunks. Total: 46
+19:31:40 [INFO] ui.sidebar — Indexed 46 chunks from RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1) - Copy.pdf
+19:31:40 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+19:31:40 [INFO] core.document_processor —   -> 37 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+19:32:05 [INFO] core.vector_store — Added 37 chunks. Total: 83
+19:32:05 [INFO] ui.sidebar — Indexed 37 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+19:32:06 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+19:32:47 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+19:43:31 [INFO] core.rag_pipeline — Initialising RAG pipeline ...
+19:43:31 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+19:43:31 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+19:43:31 [INFO] core.vector_store — VectorStore ready — 83 docs in 'documind_docs'
+19:43:33 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+19:43:33 [INFO] core.rag_pipeline — Pipeline ready.
+22:30:53 [INFO] core.rag_pipeline — Initialising RAG pipeline ...
+22:30:53 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+22:32:41 [INFO] core.embedder — Embedding model ready.
+22:32:45 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+22:32:45 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+22:32:45 [INFO] core.vector_store — VectorStore ready — 83 docs in 'documind_docs'
+22:32:47 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+22:32:47 [INFO] core.rag_pipeline — Pipeline ready.
+22:32:47 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+22:34:00 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+18:22:04 [INFO] core.rag_pipeline — Initialising pipeline ...
+18:22:04 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+18:23:13 [INFO] core.embedder — Embedding model ready.
+18:23:16 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+18:23:16 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+18:23:16 [INFO] core.vector_store — VectorStore ready — 0 docs in 'documind_docs'
+18:23:18 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+18:23:18 [INFO] core.rag_pipeline — Pipeline ready.
+18:26:25 [INFO] core.document_processor — Tesseract OCR ready.
+18:26:25 [INFO] core.document_processor — Processing: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf
+18:26:27 [INFO] core.document_processor —   -> 46 chunks from RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf
+18:26:42 [INFO] core.vector_store — Added 46 chunks. Total: 46
+18:26:42 [INFO] ui.sidebar — Indexed 46 chunks from RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf
+18:26:42 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+18:26:50 [INFO] core.document_processor —   -> 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+18:27:19 [INFO] core.vector_store — Added 43 chunks. Total: 89
+18:27:19 [INFO] ui.sidebar — Indexed 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+18:27:20 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+18:27:39 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+21:29:25 [INFO] core.rag_pipeline — Initialising pipeline ...
+21:29:25 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+21:29:25 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+21:29:25 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+21:29:27 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+21:29:30 [INFO] core.rag_pipeline — Pipeline ready.
+21:48:32 [INFO] core.rag_pipeline — Initialising pipeline ...
+21:48:32 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+21:48:32 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+21:48:32 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+21:48:34 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+21:48:35 [INFO] core.rag_pipeline — Pipeline ready.
+22:21:48 [INFO] core.rag_pipeline — Initialising pipeline ...
+22:21:48 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+22:22:04 [WARNING] huggingface_hub.utils._http — '(ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: 8ffe0986-3df8-420e-8066-e8283599c6bb)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json
+22:22:04 [WARNING] huggingface_hub.utils._http — Retrying in 1s [Retry 1/5].
+22:22:14 [INFO] core.embedder — Embedding model ready.
+22:22:14 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+22:22:14 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+22:22:14 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+22:22:16 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+22:22:19 [INFO] core.rag_pipeline — Pipeline ready.
+22:25:33 [INFO] core.rag_pipeline — Initialising pipeline ...
+22:25:33 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+22:25:55 [WARNING] huggingface_hub.utils._http — '(ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: c18a0b58-c3c8-4680-8b9a-86bba6a9ea64)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json
+22:25:55 [WARNING] huggingface_hub.utils._http — Retrying in 1s [Retry 1/5].
+22:26:03 [INFO] core.embedder — Embedding model ready.
+22:26:03 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+22:26:03 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+22:26:03 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+22:26:05 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+22:26:05 [INFO] core.rag_pipeline — Pipeline ready.
+22:27:41 [INFO] core.rag_pipeline — Initialising pipeline ...
+22:27:41 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+22:27:48 [INFO] core.embedder — Embedding model ready.
+22:27:49 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+22:27:49 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+22:27:49 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+22:27:51 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+22:27:51 [INFO] core.rag_pipeline — Pipeline ready.
+22:29:03 [INFO] core.rag_pipeline — Initialising pipeline ...
+22:29:03 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+22:29:03 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+22:29:03 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+22:29:05 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+22:29:06 [INFO] core.rag_pipeline — Pipeline ready.
+22:35:24 [INFO] core.rag_pipeline — Initialising pipeline ...
+22:35:24 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+22:36:33 [INFO] core.rag_pipeline — Initialising pipeline ...
+22:36:33 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+22:36:54 [WARNING] huggingface_hub.utils._http — '(ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: c3f646ab-dca0-442d-8651-5c5c7bdaeb90)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json
+22:36:54 [WARNING] huggingface_hub.utils._http — Retrying in 1s [Retry 1/5].
+22:36:57 [INFO] core.rag_pipeline — Initialising pipeline ...
+22:36:57 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+22:37:12 [INFO] core.embedder — Embedding model ready.
+22:37:12 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+22:37:12 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+22:37:12 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+22:37:14 [WARNING] huggingface_hub.utils._http — '(ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: 57179a73-526f-4f11-9a91-6d440fe5fac7)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json
+22:37:14 [WARNING] huggingface_hub.utils._http — Retrying in 1s [Retry 1/5].
+22:37:14 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+22:37:22 [INFO] core.rag_pipeline — Pipeline ready.
+22:37:35 [INFO] core.embedder — Embedding model ready.
+22:37:35 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+22:37:35 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+22:37:35 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+22:37:37 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+22:37:38 [INFO] core.rag_pipeline — Pipeline ready.
+22:37:52 [INFO] core.embedder — Embedding model ready.
+22:37:52 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+22:37:52 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+22:37:52 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+22:37:54 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+22:37:55 [INFO] core.rag_pipeline — Pipeline ready.
+11:45:18 [INFO] core.rag_pipeline — Initialising pipeline ...
+11:45:18 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+11:46:58 [INFO] core.embedder — Embedding model ready.
+11:47:01 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+11:47:01 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+11:47:01 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+11:47:04 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+11:47:04 [INFO] core.rag_pipeline — Pipeline ready.
+11:47:04 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+11:48:16 [INFO] core.rag_pipeline — Initialising pipeline ...
+11:48:16 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+11:48:21 [INFO] core.embedder — Embedding model ready.
+11:48:21 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+11:48:21 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+11:48:21 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+11:48:23 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+11:48:24 [INFO] core.rag_pipeline — Pipeline ready.
+11:54:14 [INFO] core.rag_pipeline — Initialising pipeline ...
+11:54:14 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+11:54:18 [INFO] core.embedder — Embedding model ready.
+11:54:18 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+11:54:18 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+11:54:18 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+11:54:20 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+11:54:21 [INFO] core.rag_pipeline — Pipeline ready.
+11:55:22 [INFO] core.rag_pipeline — Initialising pipeline ...
+11:55:22 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+11:55:27 [INFO] core.embedder — Embedding model ready.
+11:55:27 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+11:55:27 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+11:55:27 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+11:55:29 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+11:55:29 [INFO] core.rag_pipeline — Pipeline ready.
+11:59:19 [INFO] core.rag_pipeline — Initialising pipeline ...
+11:59:19 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+11:59:19 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+11:59:19 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+11:59:21 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+11:59:22 [INFO] core.rag_pipeline — Pipeline ready.
+12:00:48 [INFO] core.rag_pipeline — Initialising pipeline ...
+12:00:48 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+12:00:52 [INFO] core.embedder — Embedding model ready.
+12:00:52 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+12:00:52 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+12:00:52 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+12:00:54 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+12:00:55 [INFO] core.rag_pipeline — Pipeline ready.
+12:02:11 [INFO] core.rag_pipeline — Initialising pipeline ...
+12:02:11 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+12:02:15 [INFO] core.embedder — Embedding model ready.
+12:02:15 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+12:02:15 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+12:02:15 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+12:02:17 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+12:02:18 [INFO] core.rag_pipeline — Pipeline ready.
+12:08:41 [INFO] core.rag_pipeline — Initialising pipeline ...
+12:08:41 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+12:08:45 [INFO] core.embedder — Embedding model ready.
+12:08:45 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+12:08:45 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+12:08:45 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+12:08:47 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+12:08:48 [INFO] core.rag_pipeline — Pipeline ready.
+12:10:37 [INFO] core.rag_pipeline — Initialising pipeline ...
+12:10:37 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+12:10:37 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+12:10:37 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+12:10:39 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+12:10:40 [INFO] core.rag_pipeline — Pipeline ready.
+12:13:19 [INFO] core.rag_pipeline — Initialising pipeline ...
+12:13:19 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+12:13:26 [INFO] core.embedder — Embedding model ready.
+12:13:26 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+12:13:26 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+12:13:26 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+12:13:28 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+12:13:28 [INFO] core.rag_pipeline — Pipeline ready.
+12:15:05 [INFO] core.rag_pipeline — Initialising pipeline ...
+12:15:05 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+12:15:05 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+12:15:05 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+12:15:07 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+12:15:07 [INFO] core.rag_pipeline — Pipeline ready.
+12:16:42 [INFO] core.rag_pipeline — Initialising pipeline ...
+12:16:42 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+12:16:46 [INFO] core.embedder — Embedding model ready.
+12:16:46 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+12:16:46 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+12:16:46 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+12:16:48 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+12:16:48 [INFO] core.rag_pipeline — Pipeline ready.
+12:22:26 [INFO] core.rag_pipeline — Initialising pipeline ...
+12:22:26 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+12:22:26 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+12:22:26 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+12:22:28 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+12:22:28 [INFO] core.rag_pipeline — Pipeline ready.
+12:22:54 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+11:49:51 [INFO] core.rag_pipeline — Initialising pipeline ...
+11:49:51 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+11:52:51 [WARNING] huggingface_hub.utils._http — '(ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: a63f0c22-f47c-43a9-990f-0290a0cbae52)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json
+11:52:51 [WARNING] huggingface_hub.utils._http — Retrying in 1s [Retry 1/5].
+11:52:59 [INFO] core.embedder — Embedding model ready.
+11:53:02 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+11:53:02 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+11:53:02 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+11:53:04 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+11:53:05 [INFO] core.rag_pipeline — Pipeline ready.
+11:53:05 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+11:56:36 [INFO] core.rag_pipeline — Initialising pipeline ...
+11:56:36 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+11:56:52 [WARNING] huggingface_hub.utils._http — '(ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: 12cda2fe-c1b1-4d80-8be7-7c482fd61480)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/README.md
+11:56:52 [WARNING] huggingface_hub.utils._http — Retrying in 1s [Retry 1/5].
+11:57:05 [INFO] core.embedder — Embedding model ready.
+11:57:05 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+11:57:05 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+11:57:05 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+11:57:07 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+11:57:07 [INFO] core.rag_pipeline — Pipeline ready.
+11:59:03 [INFO] core.rag_pipeline — Initialising pipeline ...
+11:59:03 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+11:59:03 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+11:59:03 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+11:59:05 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+11:59:05 [INFO] core.rag_pipeline — Pipeline ready.
+12:02:52 [INFO] core.rag_pipeline — Initialising pipeline ...
+12:02:52 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+12:02:59 [INFO] core.embedder — Embedding model ready.
+12:02:59 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+12:02:59 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+12:02:59 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+12:03:01 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+12:03:02 [INFO] core.rag_pipeline — Pipeline ready.
+12:08:14 [INFO] core.rag_pipeline — Initialising pipeline ...
+12:08:14 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+12:08:23 [INFO] core.embedder — Embedding model ready.
+12:08:23 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+12:08:23 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+12:08:23 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+12:08:25 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+12:08:26 [INFO] core.rag_pipeline — Pipeline ready.
+12:08:55 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+12:23:09 [INFO] core.rag_pipeline — Initialising pipeline ...
+12:23:09 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+12:23:22 [WARNING] huggingface_hub.utils._http — '(ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: 13a1139c-df70-4b6b-acb3-a20777efc636)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json
+12:23:22 [WARNING] huggingface_hub.utils._http — Retrying in 1s [Retry 1/5].
+12:23:30 [INFO] core.embedder — Embedding model ready.
+12:23:30 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+12:23:30 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+12:23:30 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+12:23:32 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+12:23:33 [INFO] core.rag_pipeline — Pipeline ready.
+12:38:18 [INFO] core.rag_pipeline — Initialising pipeline ...
+12:38:18 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+12:38:28 [INFO] core.embedder — Embedding model ready.
+12:38:28 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+12:38:28 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+12:38:28 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+12:38:30 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+12:38:31 [INFO] core.rag_pipeline — Pipeline ready.
+12:41:56 [INFO] core.rag_pipeline — Initialising pipeline ...
+12:41:56 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+12:42:02 [INFO] core.embedder — Embedding model ready.
+12:42:02 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+12:42:02 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+12:42:02 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+12:42:04 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+12:42:05 [INFO] core.rag_pipeline — Pipeline ready.
+12:44:38 [INFO] core.rag_pipeline — Initialising pipeline ...
+12:44:38 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+12:44:45 [INFO] core.embedder — Embedding model ready.
+12:44:45 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+12:44:45 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+12:44:45 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+12:44:47 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+12:44:48 [INFO] core.rag_pipeline — Pipeline ready.
+13:24:59 [INFO] core.rag_pipeline — Initialising pipeline ...
+13:24:59 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+13:24:59 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+13:24:59 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+13:25:01 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+13:25:02 [INFO] core.rag_pipeline — Pipeline ready.
+13:40:41 [INFO] core.rag_pipeline — Initialising pipeline ...
+13:40:41 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+13:40:47 [INFO] core.embedder — Embedding model ready.
+13:40:47 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+13:40:47 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+13:40:47 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+13:40:49 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+13:40:49 [INFO] core.rag_pipeline — Pipeline ready.
+13:41:41 [INFO] core.rag_pipeline — Initialising pipeline ...
+13:41:41 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+13:41:41 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+13:41:41 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+13:41:43 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+13:41:44 [INFO] core.rag_pipeline — Pipeline ready.
+13:53:10 [INFO] core.rag_pipeline — Initialising pipeline ...
+13:53:10 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+13:53:10 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+13:53:10 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+13:53:12 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+13:53:12 [INFO] core.rag_pipeline — Pipeline ready.
+13:53:53 [INFO] core.rag_pipeline — Initialising pipeline ...
+13:53:53 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+13:53:59 [INFO] core.embedder — Embedding model ready.
+13:53:59 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+13:53:59 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+13:53:59 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+13:54:01 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+13:54:01 [INFO] core.rag_pipeline — Pipeline ready.
+14:02:43 [INFO] core.rag_pipeline — Initialising pipeline ...
+14:02:43 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+14:02:43 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+14:02:43 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+14:02:45 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+14:02:45 [INFO] core.rag_pipeline — Pipeline ready.
+14:21:09 [INFO] core.rag_pipeline — Initialising pipeline ...
+14:21:09 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+14:21:15 [INFO] core.embedder — Embedding model ready.
+14:21:15 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+14:21:15 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+14:21:15 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+14:21:17 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+14:21:19 [INFO] core.rag_pipeline — Pipeline ready.
+14:26:31 [INFO] core.rag_pipeline — Initialising pipeline ...
+14:26:31 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+14:26:37 [INFO] core.embedder — Embedding model ready.
+14:26:37 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+14:26:37 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+14:26:37 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+14:26:39 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+14:26:39 [INFO] core.rag_pipeline — Pipeline ready.
+14:35:33 [INFO] core.rag_pipeline — Initialising pipeline ...
+14:35:33 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+14:35:33 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+14:35:33 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+14:35:35 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+14:35:35 [INFO] core.rag_pipeline — Pipeline ready.
+14:39:45 [INFO] core.rag_pipeline — Initialising pipeline ...
+14:39:45 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+14:39:45 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+14:39:45 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+14:39:47 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+14:39:48 [INFO] core.rag_pipeline — Pipeline ready.
+15:21:01 [INFO] core.rag_pipeline — Initialising pipeline ...
+15:21:01 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+15:21:01 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+15:21:01 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+15:21:03 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+15:21:04 [INFO] core.rag_pipeline — Pipeline ready.
+15:48:33 [INFO] core.rag_pipeline — Initialising pipeline ...
+15:48:33 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+15:48:33 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+15:48:33 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+15:48:36 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+15:48:37 [INFO] core.rag_pipeline — Pipeline ready.
+15:51:49 [INFO] core.rag_pipeline — Initialising pipeline ...
+15:51:49 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+15:52:05 [WARNING] huggingface_hub.utils._http — '(ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: 6ae14953-a3b2-4798-8e7f-4746b8288bbe)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json
+15:52:05 [WARNING] huggingface_hub.utils._http — Retrying in 1s [Retry 1/5].
+15:52:11 [INFO] core.embedder — Embedding model ready.
+15:52:11 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+15:52:11 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+15:52:11 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+15:52:13 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+15:52:13 [INFO] core.rag_pipeline — Pipeline ready.
+15:54:05 [INFO] core.rag_pipeline — Initialising pipeline ...
+15:54:05 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+15:54:14 [INFO] core.embedder — Embedding model ready.
+15:54:14 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+15:54:14 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+15:54:14 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+15:54:16 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+15:54:16 [INFO] core.rag_pipeline — Pipeline ready.
+16:39:27 [INFO] core.rag_pipeline — Initialising pipeline ...
+16:39:27 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+16:39:27 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+16:39:27 [INFO] core.vector_store — VectorStore ready — 89 docs in 'documind_docs'
+16:39:29 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+16:39:31 [INFO] core.rag_pipeline — Pipeline ready.
+16:39:49 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+16:39:49 [INFO] core.vector_store — Vector store cleared.
+16:40:22 [INFO] core.document_processor — Tesseract OCR ready.
+16:40:22 [INFO] core.document_processor — Processing: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1) - Copy.pdf
+16:40:25 [INFO] core.document_processor —   -> 46 chunks from RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1) - Copy.pdf
+16:40:46 [INFO] core.vector_store — Added 46 chunks. Total: 46
+16:40:46 [INFO] ui.sidebar — Indexed 46 chunks from RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1) - Copy.pdf
+16:40:47 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+16:40:58 [INFO] core.document_processor —   -> 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+16:41:24 [INFO] core.vector_store — Added 43 chunks. Total: 89
+16:41:24 [INFO] ui.sidebar — Indexed 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+16:41:25 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+16:42:31 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+17:30:07 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+17:30:07 [INFO] core.vector_store — Vector store cleared.
+17:31:14 [INFO] core.document_processor — Tesseract OCR ready.
+17:31:14 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+17:31:25 [INFO] core.document_processor —   -> 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+17:31:52 [INFO] core.vector_store — Added 43 chunks. Total: 43
+17:31:52 [INFO] ui.sidebar — Indexed 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+17:31:53 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+17:32:22 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+17:54:15 [INFO] core.rag_pipeline — Initialising pipeline ...
+17:54:15 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+17:54:22 [INFO] core.embedder — Embedding model ready.
+17:54:22 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+17:54:22 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+17:54:22 [INFO] core.vector_store — VectorStore ready — 43 docs in 'documind_docs'
+17:54:24 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+17:54:25 [INFO] core.rag_pipeline — Pipeline ready.
+18:33:05 [INFO] core.rag_pipeline — Initialising pipeline ...
+18:33:05 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+18:33:50 [INFO] core.embedder — Embedding model ready.
+18:33:52 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+18:33:52 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+18:33:52 [INFO] core.vector_store — VectorStore ready — 0 docs in 'documind_docs'
+18:33:55 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+18:33:55 [INFO] core.rag_pipeline — Pipeline ready.
+18:34:36 [INFO] core.document_processor — Tesseract OCR ready.
+18:34:36 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+18:34:50 [INFO] core.document_processor — Saved 2 page images to cache
+18:34:50 [INFO] core.document_processor —   -> 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+18:35:28 [INFO] core.vector_store — Added 43 chunks. Total: 43
+18:35:28 [INFO] ui.sidebar — Indexed 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+18:36:03 [INFO] core.document_processor — Tesseract OCR ready.
+18:36:03 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+18:36:11 [INFO] core.document_processor — Saved 2 page images to cache
+18:36:11 [INFO] core.document_processor —   -> 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+18:36:34 [INFO] core.vector_store — Added 43 chunks. Total: 43
+18:36:34 [INFO] ui.sidebar — Indexed 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+18:36:35 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+18:41:14 [INFO] core.rag_pipeline — Initialising pipeline ...
+18:41:14 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+18:41:20 [INFO] core.embedder — Embedding model ready.
+18:41:20 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+18:41:20 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+18:41:21 [INFO] core.vector_store — VectorStore ready — 43 docs in 'documind_docs'
+18:41:23 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+18:41:24 [INFO] core.rag_pipeline — Pipeline ready.
+18:41:58 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+18:41:58 [INFO] core.vector_store — Vector store cleared.
+18:42:14 [INFO] core.document_processor — Tesseract OCR ready.
+18:42:14 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+18:42:14 [WARNING] core.document_processor — Screenshot failed for NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf: cannot import name 'PAGE_IMAGES_DIR' from 'config.settings' (C:\Documents\documind_enterprise\config\settings.py)
+18:42:24 [INFO] core.document_processor —   -> 37 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+18:42:47 [INFO] core.vector_store — Added 37 chunks. Total: 37
+18:42:47 [INFO] ui.sidebar — Indexed 37 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+18:42:48 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+18:47:46 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+18:47:46 [INFO] core.vector_store — Vector store cleared.
+18:47:56 [INFO] core.document_processor — Tesseract OCR ready.
+18:47:56 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+18:47:56 [WARNING] core.document_processor — Screenshot failed for NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf: cannot import name 'PAGE_IMAGES_DIR' from 'config.settings' (C:\Documents\documind_enterprise\config\settings.py)
+18:48:05 [INFO] core.document_processor —   -> 37 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+18:48:29 [INFO] core.vector_store — Added 37 chunks. Total: 37
+18:48:30 [INFO] ui.sidebar — Indexed 37 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+18:48:31 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+18:49:45 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+19:29:36 [INFO] core.rag_pipeline — Initialising pipeline ...
+19:29:36 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+19:29:36 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+19:29:36 [INFO] core.vector_store — VectorStore ready — 37 docs in 'documind_docs'
+19:29:38 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+19:29:42 [INFO] core.rag_pipeline — Pipeline ready.
+19:54:05 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+19:54:05 [INFO] core.vector_store — Vector store cleared.
+19:54:54 [INFO] core.document_processor — Tesseract OCR ready.
+19:54:54 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper.pdf
+19:54:54 [WARNING] core.document_processor — Screenshot failed for NIPS-2017-attention-is-all-you-need-Paper.pdf: cannot import name 'PAGE_IMAGES_DIR' from 'config.settings' (C:\Documents\documind_enterprise\config\settings.py)
+19:55:03 [INFO] core.document_processor —   -> 37 chunks from NIPS-2017-attention-is-all-you-need-Paper.pdf
+19:55:28 [INFO] core.vector_store — Added 37 chunks. Total: 37
+19:55:29 [INFO] ui.sidebar — Indexed 37 chunks from NIPS-2017-attention-is-all-you-need-Paper.pdf
+19:55:30 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+20:12:15 [INFO] core.rag_pipeline — Initialising pipeline ...
+20:12:15 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+20:12:48 [INFO] core.embedder — Embedding model ready.
+20:12:51 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+20:12:51 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+20:12:51 [INFO] core.vector_store — VectorStore ready — 37 docs in 'documind_docs'
+20:12:53 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+20:12:53 [INFO] core.rag_pipeline — Pipeline ready.
+20:12:53 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+20:13:29 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+20:13:29 [INFO] core.vector_store — Vector store cleared.
+20:13:45 [INFO] core.document_processor — Tesseract OCR ready.
+20:13:45 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+20:13:46 [WARNING] core.document_processor — Screenshot failed for NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf: cannot import name 'PAGE_IMAGES_DIR' from 'config.settings' (C:\Documents\documind_enterprise\config\settings.py)
+20:13:46 [ERROR] ui.sidebar — Error: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\ui\sidebar.py", line 152, in _process_uploads
+    chunks = processor.process_pdf(pdf_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\document_processor.py", line 75, in process_pdf
+    chunks = list(self._extract_and_chunk(pdf_path))
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DocumentProcessor' object has no attribute '_extract_and_chunk'
+20:13:57 [INFO] core.document_processor — Tesseract OCR ready.
+20:13:57 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+20:13:57 [WARNING] core.document_processor — Screenshot failed for NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf: cannot import name 'PAGE_IMAGES_DIR' from 'config.settings' (C:\Documents\documind_enterprise\config\settings.py)
+20:13:57 [ERROR] ui.sidebar — Error: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\ui\sidebar.py", line 152, in _process_uploads
+    chunks = processor.process_pdf(pdf_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\document_processor.py", line 75, in process_pdf
+    chunks = list(self._extract_and_chunk(pdf_path))
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DocumentProcessor' object has no attribute '_extract_and_chunk'
+20:16:49 [INFO] core.rag_pipeline — Initialising pipeline ...
+20:16:49 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+20:16:55 [INFO] core.embedder — Embedding model ready.
+20:16:55 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+20:16:55 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+20:16:55 [INFO] core.vector_store — VectorStore ready — 0 docs in 'documind_docs'
+20:16:57 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+20:16:58 [INFO] core.rag_pipeline — Pipeline ready.
+20:17:16 [INFO] core.document_processor — Tesseract found: C:\Program Files\Tesseract-OCR\tesseract.exe
+20:17:16 [INFO] core.document_processor — Tesseract OCR ready.
+20:17:16 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+20:17:16 [ERROR] core.document_processor — Screenshot failed for NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf: cannot import name 'PAGE_IMAGES_DIR' from 'config.settings' (C:\Documents\documind_enterprise\config\settings.py)
+20:17:25 [INFO] core.document_processor —   -> 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+20:17:51 [INFO] core.vector_store — Added 43 chunks. Total: 43
+20:17:51 [INFO] ui.sidebar — Indexed 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+20:17:52 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+20:18:00 [INFO] core.document_processor — Tesseract found: C:\Program Files\Tesseract-OCR\tesseract.exe
+20:18:00 [INFO] core.document_processor — Tesseract OCR ready.
+20:25:20 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+20:25:20 [INFO] core.vector_store — Vector store cleared.
+20:25:34 [INFO] core.document_processor — Tesseract found: C:\Program Files\Tesseract-OCR\tesseract.exe
+20:25:34 [INFO] core.document_processor — Tesseract OCR ready.
+20:25:34 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+20:25:34 [ERROR] core.document_processor — Screenshot failed for NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf: cannot import name 'PAGE_IMAGES_DIR' from 'config.settings' (C:\Documents\documind_enterprise\config\settings.py)
+20:25:43 [INFO] core.document_processor —   -> 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+20:26:11 [INFO] core.vector_store — Added 43 chunks. Total: 43
+20:26:11 [INFO] ui.sidebar — Indexed 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+20:26:12 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+20:32:48 [INFO] core.rag_pipeline — Initialising pipeline ...
+20:32:48 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+20:32:48 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+20:32:48 [INFO] core.vector_store — VectorStore ready — 43 docs in 'documind_docs'
+20:32:50 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+20:32:51 [INFO] core.rag_pipeline — Pipeline ready.
+20:33:21 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+20:33:21 [INFO] core.vector_store — Vector store cleared.
+20:33:34 [INFO] core.document_processor — Tesseract found: C:\Program Files\Tesseract-OCR\tesseract.exe
+20:33:34 [INFO] core.document_processor — Tesseract OCR ready.
+20:33:34 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+20:33:34 [ERROR] core.document_processor — Screenshot failed for NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf: cannot import name 'PAGE_IMAGES_DIR' from 'config.settings' (C:\Documents\documind_enterprise\config\settings.py)
+20:33:44 [INFO] core.document_processor —   -> 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+20:34:07 [INFO] core.vector_store — Added 43 chunks. Total: 43
+20:34:07 [INFO] ui.sidebar — Indexed 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+20:34:08 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+12:39:09 [INFO] core.rag_pipeline — Initialising pipeline ...
+12:39:09 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+12:40:48 [WARNING] huggingface_hub.utils._http — '(ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: 84e993a0-8070-4329-a9c5-40bd28c676de)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json
+12:40:48 [WARNING] huggingface_hub.utils._http — Retrying in 1s [Retry 1/5].
+12:41:00 [INFO] core.embedder — Embedding model ready.
+12:41:05 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+12:41:05 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+12:41:05 [INFO] core.vector_store — VectorStore ready — 43 docs in 'documind_docs'
+12:41:07 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+12:41:07 [INFO] core.rag_pipeline — Pipeline ready.
+12:41:07 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+16:36:44 [INFO] core.rag_pipeline — Initialising pipeline ...
+16:36:44 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+16:36:44 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+16:36:44 [INFO] core.vector_store — VectorStore ready — 43 docs in 'documind_docs'
+16:36:47 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+16:36:51 [INFO] core.rag_pipeline — Pipeline ready.
+16:37:06 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+16:37:06 [INFO] core.vector_store — Vector store cleared.
+16:37:46 [INFO] core.document_processor — Tesseract found: C:\Program Files\Tesseract-OCR\tesseract.exe
+16:37:48 [INFO] core.document_processor — Tesseract OCR ready.
+16:37:48 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+16:37:50 [INFO] core.document_processor — Screenshots: 11/11 saved for NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+16:38:01 [INFO] core.document_processor —   -> 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+16:38:31 [INFO] core.vector_store — Added 43 chunks. Total: 43
+16:38:32 [INFO] ui.sidebar — Indexed 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+16:38:33 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+16:40:06 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+16:56:28 [INFO] core.rag_pipeline — Initialising pipeline ...
+16:56:28 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+16:57:29 [INFO] core.embedder — Embedding model ready.
+16:57:32 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+16:57:32 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+16:57:32 [INFO] core.vector_store — VectorStore ready — 43 docs in 'documind_docs'
+16:57:34 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+16:57:35 [INFO] core.rag_pipeline — Pipeline ready.
+16:57:35 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+16:57:49 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+16:57:49 [INFO] core.vector_store — Vector store cleared.
+16:58:30 [INFO] core.document_processor — Tesseract found: C:\Program Files\Tesseract-OCR\tesseract.exe
+16:58:30 [INFO] core.document_processor — Tesseract OCR ready.
+16:58:30 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+16:58:33 [INFO] core.document_processor — Screenshots: 11/11 saved for NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+16:58:45 [INFO] core.document_processor —   -> 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+16:59:18 [INFO] core.vector_store — Added 43 chunks. Total: 43
+16:59:18 [INFO] ui.sidebar — Indexed 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+16:59:19 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+16:59:53 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+17:37:20 [INFO] core.rag_pipeline — Initialising pipeline ...
+17:37:21 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+17:37:21 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+17:37:21 [INFO] core.vector_store — VectorStore ready — 43 docs in 'documind_docs'
+17:37:23 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+17:37:27 [INFO] core.rag_pipeline — Pipeline ready.
+17:37:48 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+17:37:48 [INFO] core.vector_store — Vector store cleared.
+17:38:10 [INFO] core.document_processor — Tesseract found: C:\Program Files\Tesseract-OCR\tesseract.exe
+17:38:12 [INFO] core.document_processor — Tesseract OCR ready.
+17:38:12 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+17:38:16 [INFO] core.document_processor — Screenshots: 11/11 saved for NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+17:38:29 [INFO] core.document_processor —   -> 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+17:39:08 [INFO] core.vector_store — Added 43 chunks. Total: 43
+17:39:08 [INFO] ui.sidebar — Indexed 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+17:39:09 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+17:41:49 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+18:02:11 [INFO] core.rag_pipeline — Initialising pipeline ...
+18:02:11 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+18:02:31 [INFO] core.embedder — Embedding model ready.
+18:02:31 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+18:02:31 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+18:02:31 [INFO] core.vector_store — VectorStore ready — 43 docs in 'documind_docs'
+18:02:33 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+18:02:34 [INFO] core.rag_pipeline — Pipeline ready.
+18:02:48 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+18:02:48 [INFO] core.vector_store — Vector store cleared.
+18:03:06 [INFO] core.document_processor — Tesseract found: C:\Program Files\Tesseract-OCR\tesseract.exe
+18:03:07 [INFO] core.document_processor — Tesseract OCR ready.
+18:03:07 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+18:03:10 [INFO] core.document_processor — Screenshots: 11/11 saved for NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+18:03:25 [INFO] core.document_processor —   -> 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+18:03:54 [INFO] core.vector_store — Added 43 chunks. Total: 43
+18:03:54 [INFO] ui.sidebar — Indexed 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+18:03:55 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+18:11:52 [INFO] core.rag_pipeline — Initialising pipeline ...
+18:11:52 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+18:11:52 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+18:11:52 [INFO] core.vector_store — VectorStore ready — 43 docs in 'documind_docs'
+18:11:54 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+18:11:55 [INFO] core.rag_pipeline — Pipeline ready.
+18:12:23 [INFO] core.rag_pipeline — Initialising pipeline ...
+18:12:23 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+18:12:23 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+18:12:23 [INFO] core.vector_store — VectorStore ready — 43 docs in 'documind_docs'
+18:12:25 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+18:12:26 [INFO] core.rag_pipeline — Pipeline ready.
+18:12:41 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+18:12:41 [INFO] core.vector_store — Vector store cleared.
+23:53:34 [INFO] core.rag_pipeline — Initialising pipeline ...
+23:53:34 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+23:55:49 [INFO] core.rag_pipeline — Initialising pipeline ...
+23:55:49 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+23:56:27 [INFO] core.rag_pipeline — Initialising pipeline ...
+23:56:27 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+23:56:42 [WARNING] huggingface_hub.utils._http — '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: ad182bb6-4223-4dd9-bcf6-5f96313ba945)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json
+23:56:42 [WARNING] huggingface_hub.utils._http — Retrying in 1s [Retry 1/5].
+23:56:48 [INFO] core.embedder — Embedding model ready.
+23:56:51 [INFO] core.embedder — Embedding model ready.
+23:56:51 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+23:56:51 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+23:56:51 [INFO] core.vector_store — VectorStore ready — 0 docs in 'documind_docs'
+23:56:51 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+23:56:51 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+23:56:51 [INFO] core.vector_store — VectorStore ready — 0 docs in 'documind_docs'
+23:56:53 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+23:56:53 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+23:56:53 [INFO] core.rag_pipeline — Pipeline ready.
+23:56:54 [INFO] core.rag_pipeline — Pipeline ready.
+23:57:04 [INFO] core.embedder — Embedding model ready.
+23:57:04 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+23:57:04 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+23:57:04 [INFO] core.vector_store — VectorStore ready — 0 docs in 'documind_docs'
+23:57:06 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+23:57:07 [INFO] core.rag_pipeline — Pipeline ready.
+23:57:36 [INFO] core.document_processor — Tesseract found: C:\Program Files\Tesseract-OCR\tesseract.exe
+23:57:36 [INFO] core.document_processor — Tesseract OCR ready.
+23:57:36 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+23:57:38 [INFO] core.document_processor — Screenshots: 11/11 saved for NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+23:57:50 [INFO] core.document_processor —   -> 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+23:58:20 [INFO] core.vector_store — Added 43 chunks. Total: 43
+23:58:20 [INFO] ui.sidebar — Indexed 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+23:58:21 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+00:08:42 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+00:08:42 [INFO] core.vector_store — Vector store cleared.
+00:14:49 [INFO] core.rag_pipeline — Initialising pipeline ...
+00:14:49 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+00:15:02 [WARNING] huggingface_hub.utils._http — '(ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: c3adb3ae-b06c-48e3-9534-cfbabbc1c0a8)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json
+00:15:02 [WARNING] huggingface_hub.utils._http — Retrying in 1s [Retry 1/5].
+00:15:17 [INFO] core.embedder — Embedding model ready.
+00:15:17 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+00:15:17 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+00:15:17 [INFO] core.vector_store — VectorStore ready — 0 docs in 'documind_docs'
+00:15:19 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+00:15:20 [INFO] core.rag_pipeline — Pipeline ready.
+00:15:45 [INFO] core.document_processor — Tesseract found: C:\Program Files\Tesseract-OCR\tesseract.exe
+00:15:45 [INFO] core.document_processor — Tesseract OCR ready.
+00:15:45 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+00:15:48 [INFO] core.document_processor — Screenshots: 11/11 saved for NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+00:15:59 [INFO] core.document_processor —   -> 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+00:16:27 [INFO] core.vector_store — Added 43 chunks. Total: 43
+00:16:28 [INFO] ui.sidebar — Indexed 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+00:16:29 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+00:21:11 [INFO] core.rag_pipeline — Initialising pipeline ...
+00:21:11 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+00:21:11 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+00:21:11 [INFO] core.vector_store — VectorStore ready — 43 docs in 'documind_docs'
+00:21:11 [INFO] core.ocr_store — OCR store loaded: 11 pages
+00:21:13 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+00:21:15 [INFO] core.rag_pipeline — Pipeline ready.
+00:25:23 [INFO] core.rag_pipeline — Initialising pipeline ...
+00:25:23 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+00:25:35 [INFO] core.embedder — Embedding model ready.
+00:25:35 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+00:25:35 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+00:25:35 [INFO] core.vector_store — VectorStore ready — 43 docs in 'documind_docs'
+00:25:35 [INFO] core.ocr_store — OCR store loaded: 11 pages
+00:25:37 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+00:25:38 [INFO] core.rag_pipeline — Pipeline ready.
+00:34:08 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+00:52:27 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+00:52:27 [INFO] core.vector_store — Vector store cleared.
+00:53:22 [INFO] core.document_processor — Tesseract found: C:\Program Files\Tesseract-OCR\tesseract.exe
+00:53:24 [INFO] core.document_processor — Tesseract OCR ready.
+00:53:25 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+00:53:28 [INFO] core.document_processor — Screenshots: 11/11 saved for NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+00:53:41 [INFO] core.document_processor —   -> 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+00:54:20 [INFO] core.vector_store — Added 43 chunks. Total: 43
+00:54:21 [INFO] ui.sidebar — Indexed 43 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+00:54:23 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+09:24:13 [INFO] core.rag_pipeline — Initialising pipeline ...
+09:24:13 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+09:26:26 [INFO] core.embedder — Embedding model ready.
+09:26:31 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+09:26:31 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+09:26:31 [INFO] core.vector_store — VectorStore ready — 43 docs in 'documind_docs'
+09:26:31 [INFO] core.ocr_store — OCR store loaded: 11 pages
+09:26:33 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+09:26:34 [INFO] core.rag_pipeline — Pipeline ready.
+09:26:34 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+10:15:20 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+15:34:28 [INFO] core.rag_pipeline — Initialising pipeline ...
+15:34:28 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+15:37:19 [INFO] core.rag_pipeline — Initialising pipeline ...
+15:37:19 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+15:38:21 [INFO] core.embedder — Embedding model ready.
+15:38:25 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+15:38:25 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+15:38:25 [INFO] core.vector_store — VectorStore ready — 43 docs in 'documind_docs'
+15:38:25 [INFO] core.ocr_store — OCR store loaded: 11 pages
+15:38:28 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+15:38:28 [INFO] core.rag_pipeline — Pipeline ready.
+15:38:28 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+15:38:37 [INFO] core.embedder — Embedding model ready.
+15:38:37 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+15:38:37 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+15:38:37 [INFO] core.vector_store — VectorStore ready — 43 docs in 'documind_docs'
+15:38:37 [INFO] core.ocr_store — OCR store loaded: 11 pages
+15:38:39 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+15:38:39 [INFO] core.rag_pipeline — Pipeline ready.
+15:38:46 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+15:38:46 [INFO] core.vector_store — Vector store cleared.
+15:39:26 [INFO] core.rag_pipeline — Initialising pipeline ...
+15:39:26 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+15:39:26 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+15:39:26 [INFO] core.vector_store — VectorStore ready — 0 docs in 'documind_docs'
+15:39:28 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+15:39:29 [INFO] core.rag_pipeline — Pipeline ready.
+15:39:54 [INFO] core.document_processor — Tesseract ready.
+15:39:54 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+15:39:55 [INFO] core.document_processor — Screenshotting 11 pages: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+15:39:55 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_1.png
+15:39:59 [INFO] core.ocr_store — OCR store saved: 1 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+15:39:59 [INFO] core.ocr_store — OCR stored: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf page 1 (2923 chars)
+15:39:59 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_2.png
+15:40:03 [INFO] core.ocr_store — OCR store saved: 2 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+15:40:03 [INFO] core.ocr_store — OCR stored: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf page 2 (4254 chars)
+15:40:03 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_3.png
+15:40:06 [INFO] core.ocr_store — OCR store saved: 3 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+15:40:06 [INFO] core.ocr_store — OCR stored: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf page 3 (1999 chars)
+15:40:06 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_4.png
+15:40:08 [INFO] core.ocr_store — OCR store saved: 4 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+15:40:08 [INFO] core.ocr_store — OCR stored: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf page 4 (2525 chars)
+15:40:09 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_5.png
+15:40:12 [INFO] core.ocr_store — OCR store saved: 5 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+15:40:12 [INFO] core.ocr_store — OCR stored: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf page 5 (3191 chars)
+15:40:12 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_6.png
+15:40:16 [INFO] core.ocr_store — OCR store saved: 6 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+15:40:16 [INFO] core.ocr_store — OCR stored: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf page 6 (3532 chars)
+15:40:16 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_7.png
+15:40:20 [INFO] core.ocr_store — OCR store saved: 7 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+15:40:20 [INFO] core.ocr_store — OCR stored: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf page 7 (3217 chars)
+15:40:20 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_8.png
+15:40:23 [INFO] core.ocr_store — OCR store saved: 8 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+15:40:23 [INFO] core.ocr_store — OCR stored: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf page 8 (3319 chars)
+15:40:24 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_9.png
+15:40:26 [INFO] core.ocr_store — OCR store saved: 9 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+15:40:26 [INFO] core.ocr_store — OCR stored: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf page 9 (2417 chars)
+15:40:27 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_10.png
+15:40:30 [INFO] core.ocr_store — OCR store saved: 10 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+15:40:30 [INFO] core.ocr_store — OCR stored: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf page 10 (3121 chars)
+15:40:30 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_11.png
+15:40:32 [INFO] core.ocr_store — OCR store saved: 11 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+15:40:32 [INFO] core.ocr_store — OCR stored: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf page 11 (2342 chars)
+15:40:32 [INFO] core.document_processor — OCR complete: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+15:40:38 [INFO] core.document_processor — Done: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf → 41 chunks
+15:41:04 [INFO] core.vector_store — Added 41 chunks. Total: 41
+15:41:05 [INFO] ui.sidebar — Indexed 41 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+15:41:06 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+15:43:16 [INFO] core.rag_pipeline — Initialising pipeline ...
+15:43:16 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+15:43:16 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+15:43:16 [INFO] core.vector_store — VectorStore ready — 41 docs in 'documind_docs'
+15:43:16 [INFO] core.ocr_store — OCR store loaded: 11 pages
+15:43:18 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+15:43:19 [INFO] core.rag_pipeline — Pipeline ready.
+15:52:40 [INFO] core.rag_pipeline — Initialising pipeline ...
+15:52:41 [ERROR] core.session — Pipeline init failed
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 417, in _validate_tenant_database
+    self._admin_client.get_tenant(name=tenant)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 474, in get_tenant
+    return self._server.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\segment.py", line 197, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\db\mixins\sysdb.py", line 206, in get_tenant
+    row = cur.execute(sql, params).fetchone()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: tenants
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\core\session.py", line 42, in _bootstrap_pipeline
+    pipeline = RAGPipeline()
+               ^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\rag_pipeline.py", line 37, in __init__
+    self.vector_store = VectorStore(
+                        ^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 46, in __init__
+    self._init_db()
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 59, in _init_db
+    self._client = chromadb.PersistentClient(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\__init__.py", line 152, in PersistentClient
+    return ClientCreator(tenant=tenant, database=database, settings=settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 80, in __init__
+    self._validate_tenant_database(tenant=self.tenant, database=self.database)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 426, in _validate_tenant_database
+    raise ValueError(
+ValueError: Could not connect to tenant default_tenant. Are you sure it exists?
+15:52:52 [INFO] core.rag_pipeline — Initialising pipeline ...
+15:52:52 [ERROR] core.session — Pipeline init failed
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 417, in _validate_tenant_database
+    self._admin_client.get_tenant(name=tenant)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 474, in get_tenant
+    return self._server.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\segment.py", line 197, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\db\mixins\sysdb.py", line 206, in get_tenant
+    row = cur.execute(sql, params).fetchone()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: tenants
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\core\session.py", line 42, in _bootstrap_pipeline
+    pipeline = RAGPipeline()
+               ^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\rag_pipeline.py", line 37, in __init__
+    self.vector_store = VectorStore(
+                        ^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 46, in __init__
+    self._init_db()
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 59, in _init_db
+    self._client = chromadb.PersistentClient(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\__init__.py", line 152, in PersistentClient
+    return ClientCreator(tenant=tenant, database=database, settings=settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 80, in __init__
+    self._validate_tenant_database(tenant=self.tenant, database=self.database)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 426, in _validate_tenant_database
+    raise ValueError(
+ValueError: Could not connect to tenant default_tenant. Are you sure it exists?
+15:52:53 [INFO] core.rag_pipeline — Initialising pipeline ...
+15:52:53 [ERROR] core.session — Pipeline init failed
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 417, in _validate_tenant_database
+    self._admin_client.get_tenant(name=tenant)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 474, in get_tenant
+    return self._server.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\segment.py", line 197, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\db\mixins\sysdb.py", line 206, in get_tenant
+    row = cur.execute(sql, params).fetchone()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: tenants
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\core\session.py", line 42, in _bootstrap_pipeline
+    pipeline = RAGPipeline()
+               ^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\rag_pipeline.py", line 37, in __init__
+    self.vector_store = VectorStore(
+                        ^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 46, in __init__
+    self._init_db()
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 59, in _init_db
+    self._client = chromadb.PersistentClient(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\__init__.py", line 152, in PersistentClient
+    return ClientCreator(tenant=tenant, database=database, settings=settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 80, in __init__
+    self._validate_tenant_database(tenant=self.tenant, database=self.database)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 426, in _validate_tenant_database
+    raise ValueError(
+ValueError: Could not connect to tenant default_tenant. Are you sure it exists?
+15:54:15 [INFO] core.rag_pipeline — Initialising pipeline ...
+15:54:15 [ERROR] core.session — Pipeline init failed
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 417, in _validate_tenant_database
+    self._admin_client.get_tenant(name=tenant)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 474, in get_tenant
+    return self._server.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\segment.py", line 197, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\db\mixins\sysdb.py", line 206, in get_tenant
+    row = cur.execute(sql, params).fetchone()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: tenants
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\core\session.py", line 42, in _bootstrap_pipeline
+    pipeline = RAGPipeline()
+               ^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\rag_pipeline.py", line 37, in __init__
+    self.vector_store = VectorStore(
+                        ^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 46, in __init__
+    self._init_db()
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 59, in _init_db
+    self._client = chromadb.PersistentClient(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\__init__.py", line 152, in PersistentClient
+    return ClientCreator(tenant=tenant, database=database, settings=settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 80, in __init__
+    self._validate_tenant_database(tenant=self.tenant, database=self.database)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 426, in _validate_tenant_database
+    raise ValueError(
+ValueError: Could not connect to tenant default_tenant. Are you sure it exists?
+15:54:18 [INFO] core.rag_pipeline — Initialising pipeline ...
+15:54:18 [ERROR] core.session — Pipeline init failed
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 417, in _validate_tenant_database
+    self._admin_client.get_tenant(name=tenant)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 474, in get_tenant
+    return self._server.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\segment.py", line 197, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\db\mixins\sysdb.py", line 206, in get_tenant
+    row = cur.execute(sql, params).fetchone()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: tenants
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\core\session.py", line 42, in _bootstrap_pipeline
+    pipeline = RAGPipeline()
+               ^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\rag_pipeline.py", line 37, in __init__
+    self.vector_store = VectorStore(
+                        ^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 46, in __init__
+    self._init_db()
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 59, in _init_db
+    self._client = chromadb.PersistentClient(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\__init__.py", line 152, in PersistentClient
+    return ClientCreator(tenant=tenant, database=database, settings=settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 80, in __init__
+    self._validate_tenant_database(tenant=self.tenant, database=self.database)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 426, in _validate_tenant_database
+    raise ValueError(
+ValueError: Could not connect to tenant default_tenant. Are you sure it exists?
+15:54:25 [INFO] core.rag_pipeline — Initialising pipeline ...
+15:54:25 [ERROR] core.session — Pipeline init failed
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 417, in _validate_tenant_database
+    self._admin_client.get_tenant(name=tenant)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 474, in get_tenant
+    return self._server.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\segment.py", line 197, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\db\mixins\sysdb.py", line 206, in get_tenant
+    row = cur.execute(sql, params).fetchone()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: tenants
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\core\session.py", line 42, in _bootstrap_pipeline
+    pipeline = RAGPipeline()
+               ^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\rag_pipeline.py", line 37, in __init__
+    self.vector_store = VectorStore(
+                        ^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 46, in __init__
+    self._init_db()
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 59, in _init_db
+    self._client = chromadb.PersistentClient(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\__init__.py", line 152, in PersistentClient
+    return ClientCreator(tenant=tenant, database=database, settings=settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 80, in __init__
+    self._validate_tenant_database(tenant=self.tenant, database=self.database)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 426, in _validate_tenant_database
+    raise ValueError(
+ValueError: Could not connect to tenant default_tenant. Are you sure it exists?
+15:54:41 [INFO] core.rag_pipeline — Initialising pipeline ...
+15:54:41 [ERROR] core.session — Pipeline init failed
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 417, in _validate_tenant_database
+    self._admin_client.get_tenant(name=tenant)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 474, in get_tenant
+    return self._server.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\segment.py", line 197, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\db\mixins\sysdb.py", line 206, in get_tenant
+    row = cur.execute(sql, params).fetchone()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: tenants
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\core\session.py", line 42, in _bootstrap_pipeline
+    pipeline = RAGPipeline()
+               ^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\rag_pipeline.py", line 37, in __init__
+    self.vector_store = VectorStore(
+                        ^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 46, in __init__
+    self._init_db()
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 59, in _init_db
+    self._client = chromadb.PersistentClient(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\__init__.py", line 152, in PersistentClient
+    return ClientCreator(tenant=tenant, database=database, settings=settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 80, in __init__
+    self._validate_tenant_database(tenant=self.tenant, database=self.database)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 426, in _validate_tenant_database
+    raise ValueError(
+ValueError: Could not connect to tenant default_tenant. Are you sure it exists?
+15:54:42 [INFO] core.rag_pipeline — Initialising pipeline ...
+15:54:42 [ERROR] core.session — Pipeline init failed
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 417, in _validate_tenant_database
+    self._admin_client.get_tenant(name=tenant)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 474, in get_tenant
+    return self._server.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\segment.py", line 197, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\db\mixins\sysdb.py", line 206, in get_tenant
+    row = cur.execute(sql, params).fetchone()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: tenants
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\core\session.py", line 42, in _bootstrap_pipeline
+    pipeline = RAGPipeline()
+               ^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\rag_pipeline.py", line 37, in __init__
+    self.vector_store = VectorStore(
+                        ^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 46, in __init__
+    self._init_db()
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 59, in _init_db
+    self._client = chromadb.PersistentClient(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\__init__.py", line 152, in PersistentClient
+    return ClientCreator(tenant=tenant, database=database, settings=settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 80, in __init__
+    self._validate_tenant_database(tenant=self.tenant, database=self.database)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 426, in _validate_tenant_database
+    raise ValueError(
+ValueError: Could not connect to tenant default_tenant. Are you sure it exists?
+15:54:48 [INFO] core.rag_pipeline — Initialising pipeline ...
+15:54:48 [ERROR] core.session — Pipeline init failed
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 417, in _validate_tenant_database
+    self._admin_client.get_tenant(name=tenant)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 474, in get_tenant
+    return self._server.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\segment.py", line 197, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\db\mixins\sysdb.py", line 206, in get_tenant
+    row = cur.execute(sql, params).fetchone()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: tenants
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\core\session.py", line 42, in _bootstrap_pipeline
+    pipeline = RAGPipeline()
+               ^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\rag_pipeline.py", line 37, in __init__
+    self.vector_store = VectorStore(
+                        ^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 46, in __init__
+    self._init_db()
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 59, in _init_db
+    self._client = chromadb.PersistentClient(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\__init__.py", line 152, in PersistentClient
+    return ClientCreator(tenant=tenant, database=database, settings=settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 80, in __init__
+    self._validate_tenant_database(tenant=self.tenant, database=self.database)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 426, in _validate_tenant_database
+    raise ValueError(
+ValueError: Could not connect to tenant default_tenant. Are you sure it exists?
+15:54:50 [INFO] core.rag_pipeline — Initialising pipeline ...
+15:54:50 [ERROR] core.session — Pipeline init failed
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 417, in _validate_tenant_database
+    self._admin_client.get_tenant(name=tenant)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 474, in get_tenant
+    return self._server.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\segment.py", line 197, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\db\mixins\sysdb.py", line 206, in get_tenant
+    row = cur.execute(sql, params).fetchone()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: tenants
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\core\session.py", line 42, in _bootstrap_pipeline
+    pipeline = RAGPipeline()
+               ^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\rag_pipeline.py", line 37, in __init__
+    self.vector_store = VectorStore(
+                        ^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 46, in __init__
+    self._init_db()
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 59, in _init_db
+    self._client = chromadb.PersistentClient(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\__init__.py", line 152, in PersistentClient
+    return ClientCreator(tenant=tenant, database=database, settings=settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 80, in __init__
+    self._validate_tenant_database(tenant=self.tenant, database=self.database)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 426, in _validate_tenant_database
+    raise ValueError(
+ValueError: Could not connect to tenant default_tenant. Are you sure it exists?
+20:21:57 [INFO] core.rag_pipeline — Initialising pipeline ...
+20:21:57 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+20:22:39 [WARNING] huggingface_hub.file_download — Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+20:23:48 [INFO] core.embedder — Embedding model ready.
+20:23:51 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+20:23:51 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+20:23:51 [INFO] core.vector_store — VectorStore ready — 0 docs in 'documind_docs'
+20:23:53 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+20:23:54 [INFO] core.rag_pipeline — Pipeline ready.
+21:07:55 [INFO] core.rag_pipeline — Initialising pipeline ...
+21:07:55 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+21:07:55 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+21:07:55 [INFO] core.vector_store — VectorStore ready — 0 docs in 'documind_docs'
+21:07:57 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+21:07:59 [INFO] core.rag_pipeline — Pipeline ready.
+21:08:21 [INFO] core.document_processor — Tesseract ready.
+21:08:21 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+21:08:22 [INFO] core.document_processor — Screenshotting 11 pages: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+21:08:22 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_1.png
+21:08:25 [INFO] core.ocr_store — OCR store saved: 1 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+21:08:25 [INFO] core.ocr_store — OCR stored: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf page 1 (2923 chars)
+21:08:26 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_2.png
+21:08:30 [INFO] core.ocr_store — OCR store saved: 2 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+21:08:30 [INFO] core.ocr_store — OCR stored: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf page 2 (4254 chars)
+21:08:30 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_3.png
+21:08:32 [INFO] core.ocr_store — OCR store saved: 3 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+21:08:32 [INFO] core.ocr_store — OCR stored: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf page 3 (1999 chars)
+21:08:32 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_4.png
+21:08:36 [INFO] core.ocr_store — OCR store saved: 4 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+21:08:36 [INFO] core.ocr_store — OCR stored: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf page 4 (2525 chars)
+21:08:36 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_5.png
+21:08:39 [INFO] core.ocr_store — OCR store saved: 5 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+21:08:39 [INFO] core.ocr_store — OCR stored: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf page 5 (3191 chars)
+21:08:39 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_6.png
+21:08:43 [INFO] core.ocr_store — OCR store saved: 6 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+21:08:43 [INFO] core.ocr_store — OCR stored: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf page 6 (3532 chars)
+21:08:43 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_7.png
+21:08:46 [INFO] core.ocr_store — OCR store saved: 7 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+21:08:46 [INFO] core.ocr_store — OCR stored: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf page 7 (3217 chars)
+21:08:46 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_8.png
+21:08:50 [INFO] core.ocr_store — OCR store saved: 8 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+21:08:50 [INFO] core.ocr_store — OCR stored: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf page 8 (3319 chars)
+21:08:50 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_9.png
+21:08:53 [INFO] core.ocr_store — OCR store saved: 9 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+21:08:53 [INFO] core.ocr_store — OCR stored: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf page 9 (2417 chars)
+21:08:53 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_10.png
+21:08:56 [INFO] core.ocr_store — OCR store saved: 10 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+21:08:56 [INFO] core.ocr_store — OCR stored: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf page 10 (3121 chars)
+21:08:57 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_11.png
+21:08:59 [INFO] core.ocr_store — OCR store saved: 11 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+21:08:59 [INFO] core.ocr_store — OCR stored: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf page 11 (2342 chars)
+21:08:59 [INFO] core.document_processor — OCR complete: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+21:09:05 [INFO] core.document_processor — Done: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf → 41 chunks
+21:09:28 [INFO] core.vector_store — Added 41 chunks. Total: 41
+21:09:29 [INFO] ui.sidebar — Indexed 41 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+21:09:30 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+21:10:10 [INFO] core.ocr_store — OCR store loaded: 11 pages
+21:10:29 [INFO] core.ocr_store — OCR store loaded: 11 pages
+22:56:20 [INFO] core.rag_pipeline — Initialising pipeline ...
+22:56:20 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+22:56:20 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+22:56:20 [INFO] core.vector_store — VectorStore ready — 41 docs in 'documind_docs'
+22:56:20 [INFO] core.ocr_store — OCR store loaded: 11 pages
+22:56:23 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+22:56:26 [INFO] core.rag_pipeline — Pipeline ready.
+22:57:00 [INFO] core.ocr_store — OCR store loaded: 11 pages
+23:04:18 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+09:57:26 [INFO] core.rag_pipeline — Initialising pipeline ...
+09:57:26 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+09:58:32 [INFO] core.embedder — Embedding model ready.
+09:58:35 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+09:58:35 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+09:58:35 [INFO] core.vector_store — VectorStore ready — 41 docs in 'documind_docs'
+09:58:35 [INFO] core.ocr_store — OCR store loaded: 11 pages
+09:58:37 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+09:58:37 [INFO] core.rag_pipeline — Pipeline ready.
+09:58:37 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+09:59:23 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+11:42:53 [INFO] core.rag_pipeline — Initialising pipeline ...
+11:42:54 [ERROR] core.session — Pipeline init failed
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 417, in _validate_tenant_database
+    self._admin_client.get_tenant(name=tenant)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 474, in get_tenant
+    return self._server.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\segment.py", line 197, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\db\mixins\sysdb.py", line 206, in get_tenant
+    row = cur.execute(sql, params).fetchone()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: tenants
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\core\session.py", line 42, in _bootstrap_pipeline
+    pipeline = RAGPipeline()
+               ^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\rag_pipeline.py", line 37, in __init__
+    self.vector_store = VectorStore(
+                        ^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 46, in __init__
+    self._init_db()
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 59, in _init_db
+    self._client = chromadb.PersistentClient(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\__init__.py", line 152, in PersistentClient
+    return ClientCreator(tenant=tenant, database=database, settings=settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 80, in __init__
+    self._validate_tenant_database(tenant=self.tenant, database=self.database)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 426, in _validate_tenant_database
+    raise ValueError(
+ValueError: Could not connect to tenant default_tenant. Are you sure it exists?
+11:43:50 [INFO] core.rag_pipeline — Initialising pipeline ...
+11:43:56 [INFO] core.rag_pipeline — Initialising pipeline ...
+11:43:56 [ERROR] core.session — Pipeline init failed
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 417, in _validate_tenant_database
+    self._admin_client.get_tenant(name=tenant)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 474, in get_tenant
+    return self._server.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\segment.py", line 197, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\db\mixins\sysdb.py", line 206, in get_tenant
+    row = cur.execute(sql, params).fetchone()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: tenants
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\core\session.py", line 42, in _bootstrap_pipeline
+    pipeline = RAGPipeline()
+               ^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\rag_pipeline.py", line 37, in __init__
+    self.vector_store = VectorStore(
+                        ^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 46, in __init__
+    self._init_db()
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 59, in _init_db
+    self._client = chromadb.PersistentClient(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\__init__.py", line 152, in PersistentClient
+    return ClientCreator(tenant=tenant, database=database, settings=settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 80, in __init__
+    self._validate_tenant_database(tenant=self.tenant, database=self.database)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 426, in _validate_tenant_database
+    raise ValueError(
+ValueError: Could not connect to tenant default_tenant. Are you sure it exists?
+11:44:13 [INFO] core.rag_pipeline — Initialising pipeline ...
+11:44:13 [ERROR] core.session — Pipeline init failed
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 417, in _validate_tenant_database
+    self._admin_client.get_tenant(name=tenant)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 474, in get_tenant
+    return self._server.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\segment.py", line 197, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\db\mixins\sysdb.py", line 206, in get_tenant
+    row = cur.execute(sql, params).fetchone()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: tenants
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\core\session.py", line 42, in _bootstrap_pipeline
+    pipeline = RAGPipeline()
+               ^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\rag_pipeline.py", line 37, in __init__
+    self.vector_store = VectorStore(
+                        ^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 46, in __init__
+    self._init_db()
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 59, in _init_db
+    self._client = chromadb.PersistentClient(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\__init__.py", line 152, in PersistentClient
+    return ClientCreator(tenant=tenant, database=database, settings=settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 80, in __init__
+    self._validate_tenant_database(tenant=self.tenant, database=self.database)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 426, in _validate_tenant_database
+    raise ValueError(
+ValueError: Could not connect to tenant default_tenant. Are you sure it exists?
+11:44:14 [INFO] core.rag_pipeline — Initialising pipeline ...
+11:44:14 [ERROR] core.session — Pipeline init failed
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 417, in _validate_tenant_database
+    self._admin_client.get_tenant(name=tenant)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 474, in get_tenant
+    return self._server.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\segment.py", line 197, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\db\mixins\sysdb.py", line 206, in get_tenant
+    row = cur.execute(sql, params).fetchone()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: tenants
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\core\session.py", line 42, in _bootstrap_pipeline
+    pipeline = RAGPipeline()
+               ^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\rag_pipeline.py", line 37, in __init__
+    self.vector_store = VectorStore(
+                        ^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 46, in __init__
+    self._init_db()
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 59, in _init_db
+    self._client = chromadb.PersistentClient(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\__init__.py", line 152, in PersistentClient
+    return ClientCreator(tenant=tenant, database=database, settings=settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 80, in __init__
+    self._validate_tenant_database(tenant=self.tenant, database=self.database)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 426, in _validate_tenant_database
+    raise ValueError(
+ValueError: Could not connect to tenant default_tenant. Are you sure it exists?
+11:44:26 [INFO] core.rag_pipeline — Initialising pipeline ...
+11:44:26 [ERROR] core.session — Pipeline init failed
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 417, in _validate_tenant_database
+    self._admin_client.get_tenant(name=tenant)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 474, in get_tenant
+    return self._server.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\segment.py", line 197, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\db\mixins\sysdb.py", line 206, in get_tenant
+    row = cur.execute(sql, params).fetchone()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: tenants
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\core\session.py", line 42, in _bootstrap_pipeline
+    pipeline = RAGPipeline()
+               ^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\rag_pipeline.py", line 37, in __init__
+    self.vector_store = VectorStore(
+                        ^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 46, in __init__
+    self._init_db()
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 59, in _init_db
+    self._client = chromadb.PersistentClient(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\__init__.py", line 152, in PersistentClient
+    return ClientCreator(tenant=tenant, database=database, settings=settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 80, in __init__
+    self._validate_tenant_database(tenant=self.tenant, database=self.database)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 426, in _validate_tenant_database
+    raise ValueError(
+ValueError: Could not connect to tenant default_tenant. Are you sure it exists?
+11:44:28 [INFO] core.rag_pipeline — Initialising pipeline ...
+11:44:29 [ERROR] core.session — Pipeline init failed
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 417, in _validate_tenant_database
+    self._admin_client.get_tenant(name=tenant)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 474, in get_tenant
+    return self._server.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\segment.py", line 197, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\db\mixins\sysdb.py", line 206, in get_tenant
+    row = cur.execute(sql, params).fetchone()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: tenants
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\core\session.py", line 42, in _bootstrap_pipeline
+    pipeline = RAGPipeline()
+               ^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\rag_pipeline.py", line 37, in __init__
+    self.vector_store = VectorStore(
+                        ^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 46, in __init__
+    self._init_db()
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 59, in _init_db
+    self._client = chromadb.PersistentClient(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\__init__.py", line 152, in PersistentClient
+    return ClientCreator(tenant=tenant, database=database, settings=settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 80, in __init__
+    self._validate_tenant_database(tenant=self.tenant, database=self.database)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 426, in _validate_tenant_database
+    raise ValueError(
+ValueError: Could not connect to tenant default_tenant. Are you sure it exists?
+11:44:31 [INFO] core.rag_pipeline — Initialising pipeline ...
+11:44:31 [ERROR] core.session — Pipeline init failed
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 417, in _validate_tenant_database
+    self._admin_client.get_tenant(name=tenant)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 474, in get_tenant
+    return self._server.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\segment.py", line 197, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\db\mixins\sysdb.py", line 206, in get_tenant
+    row = cur.execute(sql, params).fetchone()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: tenants
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise\core\session.py", line 42, in _bootstrap_pipeline
+    pipeline = RAGPipeline()
+               ^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\rag_pipeline.py", line 37, in __init__
+    self.vector_store = VectorStore(
+                        ^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 46, in __init__
+    self._init_db()
+  File "C:\Documents\documind_enterprise\core\vector_store.py", line 59, in _init_db
+    self._client = chromadb.PersistentClient(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\__init__.py", line 152, in PersistentClient
+    return ClientCreator(tenant=tenant, database=database, settings=settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 80, in __init__
+    self._validate_tenant_database(tenant=self.tenant, database=self.database)
+  File "C:\Documents\documind_enterprise\venv\Lib\site-packages\chromadb\api\client.py", line 426, in _validate_tenant_database
+    raise ValueError(
+ValueError: Could not connect to tenant default_tenant. Are you sure it exists?
+11:45:00 [INFO] core.rag_pipeline — Initialising pipeline ...
+11:45:00 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+11:45:40 [WARNING] huggingface_hub.file_download — Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+11:49:08 [INFO] core.embedder — Embedding model ready.
+11:49:11 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+11:49:11 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+11:49:11 [INFO] core.vector_store — VectorStore ready — 0 docs in 'documind_docs'
+11:49:11 [INFO] core.ocr_store — OCR store loaded: 11 pages
+11:49:14 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+11:49:14 [INFO] core.rag_pipeline — Pipeline ready.
+11:49:37 [INFO] core.document_processor — Tesseract ready.
+11:49:37 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+11:49:37 [INFO] core.ocr_store — OCR store loaded: 11 pages
+11:49:38 [INFO] core.document_processor — Screenshotting 11 pages: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+11:49:38 [INFO] core.document_processor — OCR complete: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+11:49:44 [INFO] core.document_processor — Done: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf → 41 chunks
+11:50:10 [INFO] core.vector_store — Added 41 chunks. Total: 41
+11:50:10 [INFO] ui.sidebar — Indexed 41 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+11:50:11 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+11:50:44 [INFO] core.ocr_store — OCR store loaded: 11 pages
+11:56:34 [INFO] core.ocr_store — OCR store loaded: 11 pages
+11:58:36 [INFO] core.ocr_store — OCR store loaded: 11 pages
+11:59:51 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+18:11:31 [INFO] core.rag_pipeline — Initialising pipeline ...
+18:11:31 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+18:12:35 [INFO] core.embedder — Embedding model ready.
+18:12:37 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+18:12:37 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+18:12:37 [INFO] core.vector_store — VectorStore ready — 41 docs in 'documind_docs'
+18:12:37 [INFO] core.ocr_store — OCR store loaded: 11 pages
+18:12:40 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+18:12:40 [INFO] core.rag_pipeline — Pipeline ready.
+18:12:40 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+18:13:07 [INFO] core.ocr_store — OCR store loaded: 11 pages
+18:33:54 [INFO] core.rag_pipeline — Initialising pipeline ...
+18:33:54 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+18:33:54 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+18:33:54 [INFO] core.vector_store — VectorStore ready — 41 docs in 'documind_docs'
+18:33:54 [INFO] core.ocr_store — OCR store loaded: 11 pages
+18:33:57 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+18:33:58 [INFO] core.rag_pipeline — Pipeline ready.
+18:34:47 [INFO] core.ocr_store — OCR store loaded: 11 pages
+09:55:34 [INFO] core.rag_pipeline — Initialising pipeline ...
+09:55:34 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+09:56:48 [INFO] core.embedder — Embedding model ready.
+09:56:50 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+09:56:50 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+09:56:50 [INFO] core.vector_store — VectorStore ready — 41 docs in 'documind_docs'
+09:56:50 [INFO] core.ocr_store — OCR store loaded: 11 pages
+09:56:53 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+09:56:53 [INFO] core.rag_pipeline — Pipeline ready.
+09:56:53 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+09:57:40 [INFO] core.ocr_store — OCR store loaded: 11 pages
+10:00:16 [INFO] core.ocr_store — OCR store loaded: 11 pages
+10:05:05 [INFO] core.ocr_store — OCR store loaded: 11 pages
+10:05:23 [INFO] core.ocr_store — OCR store loaded: 11 pages
+10:26:14 [INFO] core.rag_pipeline — Initialising pipeline ...
+10:26:14 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+10:26:25 [WARNING] huggingface_hub.utils._http — '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /BAAI/bge-small-en-v1.5/resolve/main/modules.json (Caused by NameResolutionError("HTTPSConnection(host=\'huggingface.co\', port=443): Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: e2e7df4f-2e38-436b-8ffc-f107cb6b646a)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json
+10:26:25 [WARNING] huggingface_hub.utils._http — Retrying in 1s [Retry 1/5].
+10:26:32 [INFO] core.embedder — Embedding model ready.
+10:26:32 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+10:26:32 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+10:26:32 [INFO] core.vector_store — VectorStore ready — 41 docs in 'documind_docs'
+10:26:32 [INFO] core.ocr_store — OCR store loaded: 11 pages
+10:26:34 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+10:26:36 [INFO] core.rag_pipeline — Pipeline ready.
+10:27:05 [INFO] core.ocr_store — OCR store loaded: 11 pages
+10:27:33 [INFO] core.ocr_store — OCR store loaded: 11 pages
+10:31:06 [INFO] core.rag_pipeline — Initialising pipeline ...
+10:31:06 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+10:31:06 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+10:31:06 [INFO] core.vector_store — VectorStore ready — 41 docs in 'documind_docs'
+10:31:06 [INFO] core.ocr_store — OCR store loaded: 11 pages
+10:31:08 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+10:31:09 [INFO] core.rag_pipeline — Pipeline ready.
+10:31:38 [INFO] core.ocr_store — OCR store loaded: 11 pages
+10:32:05 [INFO] core.ocr_store — OCR store loaded: 11 pages
+10:43:59 [INFO] core.rag_pipeline — Initialising pipeline ...
+10:43:59 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+10:44:12 [INFO] core.embedder — Embedding model ready.
+10:44:12 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+10:44:12 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+10:44:12 [INFO] core.vector_store — VectorStore ready — 41 docs in 'documind_docs'
+10:44:12 [INFO] core.ocr_store — OCR store loaded: 11 pages
+10:44:14 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+10:44:15 [INFO] core.rag_pipeline — Pipeline ready.
+10:46:34 [INFO] core.ocr_store — OCR store loaded: 11 pages
+10:52:09 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+10:52:09 [INFO] core.vector_store — Vector store cleared.
+10:53:44 [INFO] core.document_processor — Tesseract ready.
+10:53:44 [INFO] core.document_processor — Processing: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf
+10:53:44 [INFO] core.ocr_store — OCR store loaded: 11 pages
+10:53:45 [INFO] core.document_processor — Screenshotting 13 pages: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf
+10:53:45 [INFO] core.document_processor —   Screenshot saved: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT__1__page_1.png
+10:53:48 [INFO] core.ocr_store — OCR store saved: 12 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+10:53:48 [INFO] core.ocr_store — OCR stored: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf page 1 (2588 chars)
+10:53:48 [INFO] core.document_processor —   Screenshot saved: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT__1__page_2.png
+10:53:51 [INFO] core.ocr_store — OCR store saved: 13 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+10:53:51 [INFO] core.ocr_store — OCR stored: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf page 2 (3522 chars)
+10:53:51 [INFO] core.document_processor —   Screenshot saved: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT__1__page_3.png
+10:53:55 [INFO] core.ocr_store — OCR store saved: 14 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+10:53:55 [INFO] core.ocr_store — OCR stored: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf page 3 (3871 chars)
+10:53:55 [INFO] core.document_processor —   Screenshot saved: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT__1__page_4.png
+10:53:59 [INFO] core.ocr_store — OCR store saved: 15 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+10:53:59 [INFO] core.ocr_store — OCR stored: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf page 4 (3861 chars)
+10:53:59 [INFO] core.document_processor —   Screenshot saved: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT__1__page_5.png
+10:54:02 [INFO] core.ocr_store — OCR store saved: 16 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+10:54:02 [INFO] core.ocr_store — OCR stored: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf page 5 (3226 chars)
+10:54:02 [INFO] core.document_processor —   Screenshot saved: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT__1__page_6.png
+10:54:05 [INFO] core.ocr_store — OCR store saved: 17 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+10:54:05 [INFO] core.ocr_store — OCR stored: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf page 6 (3338 chars)
+10:54:05 [INFO] core.document_processor —   Screenshot saved: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT__1__page_7.png
+10:54:08 [INFO] core.ocr_store — OCR store saved: 18 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+10:54:08 [INFO] core.ocr_store — OCR stored: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf page 7 (3074 chars)
+10:54:08 [INFO] core.document_processor —   Screenshot saved: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT__1__page_8.png
+10:54:11 [INFO] core.ocr_store — OCR store saved: 19 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+10:54:11 [INFO] core.ocr_store — OCR stored: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf page 8 (3219 chars)
+10:54:11 [INFO] core.document_processor —   Screenshot saved: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT__1__page_9.png
+10:54:14 [INFO] core.ocr_store — OCR store saved: 20 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+10:54:14 [INFO] core.ocr_store — OCR stored: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf page 9 (3412 chars)
+10:54:14 [INFO] core.document_processor —   Screenshot saved: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT__1__page_10.png
+10:54:17 [INFO] core.ocr_store — OCR store saved: 21 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+10:54:17 [INFO] core.ocr_store — OCR stored: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf page 10 (2876 chars)
+10:54:17 [INFO] core.document_processor —   Screenshot saved: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT__1__page_11.png
+10:54:20 [INFO] core.ocr_store — OCR store saved: 22 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+10:54:20 [INFO] core.ocr_store — OCR stored: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf page 11 (2991 chars)
+10:54:20 [INFO] core.document_processor —   Screenshot saved: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT__1__page_12.png
+10:54:23 [INFO] core.ocr_store — OCR store saved: 23 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+10:54:23 [INFO] core.ocr_store — OCR stored: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf page 12 (2999 chars)
+10:54:23 [INFO] core.document_processor —   Screenshot saved: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT__1__page_13.png
+10:54:24 [INFO] core.ocr_store — OCR store saved: 24 pages → C:\Documents\documind_enterprise\data\cache\ocr_data.json
+10:54:24 [INFO] core.ocr_store — OCR stored: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf page 13 (40 chars)
+10:54:24 [INFO] core.document_processor — OCR complete: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf
+10:54:25 [INFO] core.document_processor — Done: RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf → 46 chunks
+10:54:41 [INFO] core.vector_store — Added 46 chunks. Total: 46
+10:54:41 [INFO] ui.sidebar — Indexed 46 chunks from RESEARCHMETHODSANDPROFESSIONALISSUESASSESMENTMAINDRAFT (1).pdf
+10:54:42 [INFO] core.document_processor — Processing: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+10:54:42 [INFO] core.ocr_store — OCR store loaded: 24 pages
+10:54:42 [INFO] core.document_processor — Screenshotting 11 pages: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+10:54:42 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_1.png
+10:54:42 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_2.png
+10:54:42 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_3.png
+10:54:42 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_4.png
+10:54:43 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_5.png
+10:54:43 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_6.png
+10:54:43 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_7.png
+10:54:43 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_8.png
+10:54:43 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_9.png
+10:54:43 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_10.png
+10:54:43 [INFO] core.document_processor —   Screenshot saved: NIPS-2017-attention-is-all-you-need-Paper_-_Copy_page_11.png
+10:54:43 [INFO] core.document_processor — OCR complete: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+10:54:48 [INFO] core.document_processor — Done: NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf → 41 chunks
+10:55:13 [INFO] core.vector_store — Added 41 chunks. Total: 87
+10:55:13 [INFO] ui.sidebar — Indexed 41 chunks from NIPS-2017-attention-is-all-you-need-Paper - Copy.pdf
+10:55:14 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+10:55:32 [ERROR] chromadb.telemetry.product.posthog — Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+11:00:23 [INFO] core.ocr_store — OCR store loaded: 24 pages
+12:26:41 [INFO] core.rag_pipeline — Initialising pipeline ...
+12:26:41 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+12:27:16 [WARNING] huggingface_hub.utils._http — Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+12:27:26 [INFO] core.embedder — Embedding model ready.
+12:27:29 [INFO] core.vector_store — VectorStore ready — 87 docs in 'documind_docs'
+12:27:30 [INFO] core.ocr_store — OCR store loaded: 24 pages
+12:27:32 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+12:27:32 [INFO] core.rag_pipeline — Pipeline ready.
+12:28:19 [INFO] core.ocr_store — OCR store loaded: 24 pages
+15:21:01 [INFO] core.rag_pipeline — Initialising pipeline ...
+15:21:01 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+15:22:09 [WARNING] huggingface_hub.utils._http — Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+15:22:20 [INFO] core.embedder — Embedding model ready.
+15:22:24 [INFO] core.vector_store — VectorStore ready — 87 docs in 'documind_docs'
+15:22:24 [INFO] core.ocr_store — OCR store loaded: 24 pages
+15:22:27 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+15:22:27 [INFO] core.rag_pipeline — Pipeline ready.
+15:35:02 [INFO] core.rag_pipeline — Initialising pipeline ...
+15:35:03 [INFO] core.vector_store — VectorStore ready — 87 docs in 'documind_docs'
+15:35:03 [INFO] core.ocr_store — OCR store loaded: 24 pages
+15:35:05 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+15:35:06 [INFO] core.rag_pipeline — Pipeline ready.
+15:35:40 [INFO] core.rag_pipeline — Initialising pipeline ...
+15:35:40 [INFO] core.vector_store — VectorStore ready — 87 docs in 'documind_docs'
+15:35:40 [INFO] core.ocr_store — OCR store loaded: 24 pages
+15:35:42 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+15:35:42 [INFO] core.rag_pipeline — Pipeline ready.
+15:41:18 [INFO] core.ocr_store — OCR store loaded: 24 pages
+15:50:22 [INFO] core.rag_pipeline — Initialising pipeline ...
+15:50:22 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+15:50:52 [WARNING] huggingface_hub.utils._http — Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+15:51:16 [INFO] core.embedder — Embedding model ready.
+15:51:19 [INFO] core.vector_store — VectorStore ready — 87 docs in 'documind_docs'
+15:51:19 [INFO] core.ocr_store — OCR store loaded: 24 pages
+15:51:21 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+15:51:21 [INFO] core.rag_pipeline — Pipeline ready.
+15:57:42 [INFO] core.ocr_store — OCR store loaded: 24 pages
+15:58:04 [INFO] core.ocr_store — OCR store loaded: 24 pages
+15:58:04 [ERROR] ui.chat — Query error
+Traceback (most recent call last):
+  File "C:\Documents\documind_enterprise (2)\documind_enterprise\ui\chat.py", line 355, in _submit_question
+    for token in stream:
+  File "C:\Documents\documind_enterprise (2)\documind_enterprise\core\rag_pipeline.py", line 573, in _diagram_stream
+    page_data_list = ocr_store.search_diagram_pages(target_file, diagram_keywords)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\documind_enterprise (2)\documind_enterprise\core\ocr_store.py", line 84, in search_diagram_pages
+    results.sort(reverse=True)
+TypeError: '<' not supported between instances of 'dict' and 'dict'
+16:08:28 [INFO] core.ocr_store — OCR store loaded: 24 pages
+16:08:50 [INFO] core.ocr_store — OCR store loaded: 24 pages
+16:21:10 [INFO] core.ocr_store — OCR store loaded: 24 pages
+12:25:37 [INFO] core.rag_pipeline — Initialising pipeline ...
+12:25:37 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+12:30:01 [WARNING] huggingface_hub.utils._http — Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+12:30:07 [INFO] core.embedder — Embedding model ready.
+12:30:16 [INFO] core.vector_store — VectorStore ready — 87 docs in 'documind_docs'
+12:30:16 [INFO] core.ocr_store — OCR store loaded: 24 pages
+12:30:20 [WARNING] core.rag_pipeline — Ollama offline.
+12:30:21 [INFO] core.rag_pipeline — Pipeline ready.
+12:53:32 [INFO] core.rag_pipeline — Initialising pipeline ...
+12:53:32 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+12:54:06 [WARNING] huggingface_hub.utils._http — Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+12:54:12 [INFO] core.embedder — Embedding model ready.
+12:54:16 [INFO] core.vector_store — VectorStore ready — 87 docs in 'documind_docs'
+12:54:16 [INFO] core.ocr_store — OCR store loaded: 24 pages
+12:54:20 [WARNING] core.rag_pipeline — Ollama offline.
+12:54:20 [INFO] core.rag_pipeline — Pipeline ready.
+12:56:33 [INFO] core.rag_pipeline — Initialising pipeline ...
+12:56:33 [INFO] core.vector_store — VectorStore ready — 87 docs in 'documind_docs'
+12:56:33 [INFO] core.ocr_store — OCR store loaded: 24 pages
+12:56:37 [WARNING] core.rag_pipeline — Ollama offline.
+12:56:38 [INFO] core.rag_pipeline — Pipeline ready.
+12:57:18 [INFO] core.rag_pipeline — Initialising pipeline ...
+12:57:18 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+12:57:44 [WARNING] huggingface_hub.utils._http — Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+12:57:50 [INFO] core.embedder — Embedding model ready.
+12:57:52 [INFO] core.vector_store — VectorStore ready — 87 docs in 'documind_docs'
+12:57:52 [INFO] core.ocr_store — OCR store loaded: 24 pages
+12:57:56 [WARNING] core.rag_pipeline — Ollama offline.
+12:57:57 [INFO] core.rag_pipeline — Pipeline ready.
+11:51:18 [INFO] core.rag_pipeline — Initialising pipeline ...
+11:51:18 [INFO] core.embedder — Loading embedding model: BAAI/bge-small-en-v1.5
+11:53:13 [WARNING] huggingface_hub.utils._http — Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+11:54:26 [INFO] core.embedder — Embedding model ready.
+11:54:33 [INFO] core.vector_store — VectorStore ready — 87 docs in 'documind_docs'
+11:54:33 [INFO] core.ocr_store — OCR store loaded: 24 pages
+11:54:35 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+11:54:36 [INFO] core.rag_pipeline — Pipeline ready.
+11:59:50 [INFO] core.ocr_store — OCR store loaded: 24 pages
+13:19:42 [INFO] core.rag_pipeline — Initialising pipeline ...
+13:19:42 [INFO] core.vector_store — VectorStore ready — 87 docs in 'documind_docs'
+13:19:42 [INFO] core.ocr_store — OCR store loaded: 24 pages
+13:19:45 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+13:19:48 [INFO] core.rag_pipeline — Pipeline ready.
+14:49:16 [INFO] core.rag_pipeline — Initialising pipeline ...
+14:49:17 [INFO] core.vector_store — VectorStore ready — 87 docs in 'documind_docs'
+14:49:17 [INFO] core.ocr_store — OCR store loaded: 24 pages
+14:49:19 [INFO] core.rag_pipeline — Model: qwen2.5:0.5b
+14:49:24 [INFO] core.rag_pipeline — Pipeline ready.
